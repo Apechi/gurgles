@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <LinearLayout
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:theme="@style/Theme.MaterialComponents"
       android:id="@+id/layout"
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
@@ -11,427 +12,465 @@
       android:layout_marginRight="8dp"
       android:layout_marginTop="8dp"
       android:layout_marginBottom="24dp"
-      android:orientation="vertical"
       tools:ignore="RtlHardcoded">
 
-    <Space
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
-    <GridLayout
-        android:id="@+id/puzzle"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:rowCount="6"
-        android:columnCount="5"
-        android:useDefaultMargins="true"
-        tools:ignore="HardcodedText">
+        android:padding="8dp"
+        app:cardBackgroundColor="?attr/cardbgcolor"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-      <TextView
+      <GridLayout
+          android:id="@+id/puzzle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+          android:layout_gravity="center_horizontal"
+          android:columnCount="5"
+          android:padding="16dp"
+          android:rowCount="6"
+          android:useDefaultMargins="true"
+          tools:ignore="HardcodedText">
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:minWidth="35dp"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingLeft="4dp"
-          android:paddingRight="4dp"
-          android:paddingTop="4dp"
-          android:paddingBottom="4dp"
-          android:background="@drawable/box"
-          android:minWidth="35dp"
-          android:gravity="center"
-          android:textColor="@android:color/white"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-    </GridLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:minWidth="35dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
 
-    <Space
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+      </GridLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
     <HorizontalScrollView
         android:id="@+id/scroll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:paddingTop="8dp"
-        android:layout_gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
       <LinearLayout
           android:id="@+id/keyboard"
@@ -450,160 +489,160 @@
               android:id="@+id/Q"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="Q"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="Q"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/W"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="W"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="W"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/E"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="E"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="E"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/R"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="R"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="R"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/T"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="T"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="T"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/Y"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="Y"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="Y"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/U"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="U"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="U"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/I"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="I"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="I"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/O"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="O"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="O"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/P"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="P"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="P"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
         </LinearLayout>
 
@@ -619,144 +658,144 @@
               android:id="@+id/A"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="A"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="A"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/S"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="S"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="S"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/D"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="D"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="D"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/F"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="F"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="F"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/G"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="G"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="G"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/H"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="H"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="H"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/J"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="J"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="J"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/K"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="K"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="K"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/L"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="L"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="L"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
         </LinearLayout>
 
@@ -772,142 +811,142 @@
               android:id="@+id/enter"
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="7dp"
-              android:paddingBottom="7dp"
-              android:minWidth="49dp"
               android:background="@drawable/key"
               android:gravity="center"
-              tools:ignore="ContentDescription"
-              android:src="@drawable/ic_keyboard_return_white_24dp" />
+              android:minWidth="49dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="7dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="7dp"
+              android:src="@drawable/ic_keyboard_return_white_24dp"
+              tools:ignore="ContentDescription" />
 
           <TextView
               android:id="@+id/Z"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="Z"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="Z"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/X"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="X"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="X"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/C"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="C"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="C"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/V"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="V"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="V"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/B"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="B"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="B"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/N"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="N"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="N"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <TextView
               android:id="@+id/M"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="4dp"
-              android:paddingBottom="4dp"
-              android:text="M"
-              android:minWidth="31dp"
               android:background="@drawable/key"
               android:gravity="center"
-              android:textColor="@android:color/white"
-              android:textAppearance="?android:attr/textAppearanceLarge" />
+              android:minWidth="31dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="4dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="4dp"
+              android:text="M"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@android:color/white" />
 
           <ImageView
               android:id="@+id/back"
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
               android:layout_marginLeft="2dp"
-              android:paddingLeft="4dp"
-              android:paddingRight="4dp"
-              android:paddingTop="7dp"
-              android:paddingBottom="7dp"
-              android:minWidth="49dp"
               android:background="@drawable/key"
               android:gravity="center"
-              tools:ignore="ContentDescription"
-              android:src="@drawable/ic_backspace_white_24dp" />
+              android:minWidth="49dp"
+              android:paddingLeft="4dp"
+              android:paddingTop="7dp"
+              android:paddingRight="4dp"
+              android:paddingBottom="7dp"
+              android:src="@drawable/ic_backspace_white_24dp"
+              tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -915,7 +954,7 @@
 
     </HorizontalScrollView>
 
-  </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
   <nl.dionsegijn.konfetti.xml.KonfettiView
       android:id="@+id/konfettiView"

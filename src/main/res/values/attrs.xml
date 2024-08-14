@@ -9,6 +9,8 @@
     <attr name="box_bdcolour"  format="reference" />
     <attr name="key_normal"  format="reference" />
     <attr name="key_pressed"  format="reference" />
+    <attr name="titlecolor"  format="reference" />
+    <attr name="cardbgcolor"  format="reference" />
 
   </declare-styleable>
 

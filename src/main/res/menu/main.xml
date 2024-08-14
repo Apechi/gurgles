@@ -1,234 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="AlwaysShowAction">
 
-  <item
-      android:id="@+id/refresh"
-      android:icon="@drawable/ic_refresh_white_24dp"
-      android:showAsAction="ifRoom"
-      android:title="@string/refresh" />
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/refresh" />
 
-  <item
-      android:id="@+id/share"
-      android:icon="@drawable/ic_share_white_24dp"
-      android:showAsAction="ifRoom"
-      android:title="@string/share">
-    <menu>
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share_white_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/share">
+        <menu>
 
-        <item
-            android:id="@+id/image"
-            android:showAsAction="never"
-            android:title="@string/image" />
+            <item
+                android:id="@+id/image"
+                app:showAsAction="never"
+                android:title="@string/image" />
 
-        <item
-            android:id="@+id/code"
-            android:showAsAction="never"
-            android:title="@string/code" />
+            <item
+                android:id="@+id/code"
+                android:title="@string/code"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/text"
-            android:showAsAction="never"
-            android:title="@string/text" />
+            <item
+                android:id="@+id/text"
+                app:showAsAction="never"
+                android:title="@string/text" />
 
-    </menu>
-  </item>
+        </menu>
+    </item>
 
-  <item
-      android:id="@+id/theme"
-      android:showAsAction="never"
-      android:title="@string/theme">
-    <menu>
+    <item
+        android:id="@+id/theme"
+        app:showAsAction="never"
+        android:title="@string/theme">
+        <menu>
 
-        <item
-            android:id="@+id/dark"
-            android:showAsAction="never"
-            android:title="@string/dark" />
+            <item
+                android:id="@+id/dark"
+                android:title="@string/dark"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/cyan"
-            android:showAsAction="never"
-            android:title="@string/cyan" />
+            <item
+                android:id="@+id/cyan"
+                android:title="@string/cyan"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/blue"
-            android:showAsAction="never"
-            android:title="@string/blue" />
+            <item
+                android:id="@+id/blue"
+                android:title="@string/blue"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/orange"
-            android:showAsAction="never"
-            android:title="@string/orange" />
+            <item
+                android:id="@+id/orange"
+                app:showAsAction="never"
+                android:title="@string/orange" />
 
-        <item
-            android:id="@+id/purple"
-            android:showAsAction="never"
-            android:title="@string/purple" />
+            <item
+                android:id="@+id/purple"
+                app:showAsAction="never"
+                android:title="@string/purple" />
 
-        <item
-            android:id="@+id/red"
-            android:showAsAction="never"
-            android:title="@string/red" />
+            <item
+                android:id="@+id/red"
+                app:showAsAction="never"
+                android:title="@string/red" />
 
-        <item
-            android:id="@+id/black"
-            android:showAsAction="never"
-            android:title="@string/black" />
+            <item
+                android:id="@+id/black"
+                android:title="@string/black"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/light"
-            android:showAsAction="never"
-            android:title="@string/light" />
+            <item
+                android:id="@+id/light"
+                app:showAsAction="never"
+                android:title="@string/light" />
 
-    </menu>
-  </item>
+        </menu>
+    </item>
 
-  <item
-      android:id="@+id/options"
-      android:showAsAction="never"
-      android:title="@string/options">
-    <menu>
+    <item
+        android:id="@+id/options"
+        app:showAsAction="never"
+        android:title="@string/options">
+        <menu>
 
-      <item
-          android:id="@+id/confetti"
-          android:checkable="true"
-          android:checked="true"
-          android:showAsAction="never"
-          android:title="@string/confetti" />
+            <item
+                android:id="@+id/confetti"
+                android:checkable="true"
+                android:checked="true"
+                android:title="@string/confetti"
+                app:showAsAction="never" />
 
-      <item
-          android:id="@+id/fanfare"
-          android:checkable="true"
-          android:checked="true"
-          android:showAsAction="never"
-          android:title="@string/fanfare" />
+            <item
+                android:id="@+id/fanfare"
+                android:checkable="true"
+                android:checked="true"
+                app:showAsAction="never"
+                android:title="@string/fanfare" />
 
-      <item
-          android:id="@+id/word"
-          android:checkable="true"
-          android:checked="false"
-          android:showAsAction="never"
-          android:title="@string/word" />
+            <item
+                android:id="@+id/word"
+                android:checkable="true"
+                android:checked="false"
+                app:showAsAction="never"
+                android:title="@string/word" />
 
-    </menu>
-  </item>
+        </menu>
+    </item>
 
-  <item
-      android:id="@+id/dict"
-      android:showAsAction="never"
-      android:title="@string/dict">
-    <menu>
-      <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/dict"
+        app:showAsAction="never"
+        android:title="@string/dict">
+        <menu>
+            <group android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/wikt"
-            android:checked="true"
-            android:title="@string/wikt" />
+                <item
+                    android:id="@+id/wikt"
+                    android:checked="true"
+                    android:title="@string/wikt" />
 
-        <item
-            android:id="@+id/aard2"
-            android:title="@string/aard2" />
+                <item
+                    android:id="@+id/aard2"
+                    android:title="@string/aard2" />
 
-        <item
-            android:id="@+id/quickdic"
-            android:title="@string/quickdic" />
+                <item
+                    android:id="@+id/quickdic"
+                    android:title="@string/quickdic" />
 
-      </group>
-    </menu>
-  </item>
+            </group>
+        </menu>
+    </item>
 
-  <item
-      android:id="@+id/language"
-      android:showAsAction="never"
-      android:title="@string/language">
-    <menu>
+    <item
+        android:id="@+id/language"
+        app:showAsAction="never"
+        android:title="@string/language">
+        <menu>
 
-      <item
-          android:id="@+id/english"
-          android:showAsAction="never"
-          android:title="@string/english" />
+            <item
+                android:id="@+id/english"
+                app:showAsAction="never"
+                android:title="@string/english" />
 
-      <item
-          android:id="@+id/italian"
-          android:showAsAction="never"
-          android:title="@string/italian" />
+            <item
+                android:id="@+id/italian"
+                app:showAsAction="never"
+                android:title="@string/italian" />
 
-      <item
-          android:id="@+id/spanish"
-          android:showAsAction="never"
-          android:title="@string/spanish" />
+            <item
+                android:id="@+id/spanish"
+                app:showAsAction="never"
+                android:title="@string/spanish" />
 
-      <item
-          android:id="@+id/catalan"
-          android:showAsAction="never"
-          android:title="@string/catalan" />
+            <item
+                android:id="@+id/catalan"
+                android:title="@string/catalan"
+                app:showAsAction="never" />
 
-      <item
-          android:id="@+id/french"
-          android:showAsAction="never"
-          android:title="@string/french" />
+            <item
+                android:id="@+id/french"
+                app:showAsAction="never"
+                android:title="@string/french" />
 
-      <item
-          android:id="@+id/portuguese"
-          android:showAsAction="never"
-          android:title="@string/portuguese" />
+            <item
+                android:id="@+id/portuguese"
+                app:showAsAction="never"
+                android:title="@string/portuguese" />
 
-      <item
-          android:id="@+id/german"
-          android:showAsAction="never"
-          android:title="@string/german" />
+            <item
+                android:id="@+id/german"
+                app:showAsAction="never"
+                android:title="@string/german" />
 
-      <item
-          android:id="@+id/dutch"
-          android:showAsAction="never"
-          android:title="@string/dutch" />
+            <item
+                android:id="@+id/dutch"
+                app:showAsAction="never"
+                android:title="@string/dutch" />
 
-      <item
-          android:id="@+id/afrikaans"
-          android:showAsAction="never"
-          android:title="@string/afrikaans" />
+            <item
+                android:id="@+id/afrikaans"
+                android:title="@string/afrikaans"
+                app:showAsAction="never" />
 
-        <item
-            android:id="@+id/hungarian"
-            android:showAsAction="never"
-            android:title="@string/hungarian" />
+            <item
+                android:id="@+id/hungarian"
+                app:showAsAction="never"
+                android:title="@string/hungarian" />
 
-        <item
-            android:id="@+id/indonesian"
-            android:showAsAction="never"
-            android:title="@string/indonesian" />
+            <item
+                android:id="@+id/indonesian"
+                app:showAsAction="never"
+                android:title="@string/indonesian" />
 
-    </menu>
-  </item>
+        </menu>
+    </item>
 
-  <item
-      android:id="@+id/getCode"
-      android:showAsAction="never"
-      android:title="@string/getCode">
-    <menu>
+    <item
+        android:id="@+id/getCode"
+        app:showAsAction="never"
+        android:title="@string/getCode">
+        <menu>
 
-        <item
-            android:id="@+id/getText"
-            android:showAsAction="never"
-            android:title="@string/code" />
+            <item
+                android:id="@+id/getText"
+                app:showAsAction="never"
+                android:title="@string/code" />
 
-        <item
-            android:id="@+id/getImage"
-            android:showAsAction="never"
-            android:title="@string/qrCode" />
+            <item
+                android:id="@+id/getImage"
+                app:showAsAction="never"
+                android:title="@string/qrCode" />
 
-    </menu>
-  </item>
+        </menu>
+    </item>
+`
+    <item
+        android:id="@+id/highlight"
+        app:showAsAction="never"
+        android:title="@string/highlight" />
 
-  <item
-      android:id="@+id/highlight"
-      android:showAsAction="never"
-      android:title="@string/highlight" />
-
-  <item
-      android:id="@+id/about"
-      android:showAsAction="never"
-      android:title="@string/about" />
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        app:showAsAction="never" />
 
 </menu>

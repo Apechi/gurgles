@@ -1,62 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <!--  dark theme  -->
-  <color name="dark_background">#303030</color>
-  <color name="dark_key_normal">#202020</color>
-  <color name="dark_key_pressed">#444444</color>
-  <color name="dark_box_background">@android:color/transparent</color>
-  <color name="dark_box_border">@android:color/black</color>
+  <!--  Dark theme  -->
+  <color name="dark_background">#1E1E1E</color> <!-- Darker Gray for Background -->
+  <color name="dark_key_normal">#3A3A3A</color> <!-- Medium Gray for Key Normal -->
+  <color name="dark_key_pressed">#5C5C5C</color> <!-- Slightly Lighter Gray for Key Pressed -->
+  <color name="dark_box_background">#333333</color> <!-- Dark Gray for Box Background -->
+  <color name="dark_box_border">#FFFFFF</color> <!-- White for Box Border -->
+  <color name="dark_titlecolor">#FFFFFF</color> <!-- Very Dark Gray for Title Color -->
+  <color name="dark_cardbgcolor">#2A2A2A</color> <!-- Darker Gray for Card Background -->
 
   <!--  Blue theme  -->
-  <color name="blue_background">#242d48</color>
-  <color name="blue_action_bar">#2d3d72</color>
-  <color name="blue_key_normal">#0e152a</color>
-  <color name="blue_key_pressed">#40434c</color>
-  <color name="blue_box_background">#20105c</color>
-  <color name="blue_box_border">#64548f</color>
+  <color name="blue_background">#ACBED1</color> <!-- Light Blue for Background -->
+  <color name="blue_action_bar">#1F3A6F</color> <!-- Muted Blue for Action Bar -->
+  <color name="blue_key_normal">#0D2D53</color> <!-- Deep Blue for Key Normal -->
+  <color name="blue_key_pressed">#3A4B6D</color> <!-- Slightly Lighter Blue for Key Pressed -->
+  <color name="blue_box_background">#1A1F6B</color> <!-- Dark Blue for Box Background -->
+  <color name="blue_box_border">#1A1F6B</color> <!-- Same Dark Blue for Box Border -->
+  <color name="blue_titlecolor">#003366</color> <!-- Darker Blue for Title Color -->
+  <color name="blue_cardbgcolor">#3F5C76</color> <!-- Darker Blue for Card Background -->
 
-  <!--  red theme  -->
-  <color name="red_background">#ed2424</color>
-  <color name="red_action_bar">#7a0f28</color>
-  <color name="red_key_normal">#781431</color>
-  <color name="red_key_pressed">#cc2353</color>
-  <color name="red_box_background">#ed4e2e</color>
-  <color name="red_box_border">#edae25</color>
+  <!--  Red theme  -->
+  <color name="red_background">#FCE5E5</color> <!-- Soft Pinkish Red for Background -->
+  <color name="red_action_bar">#A12F43</color> <!-- Muted Red for Action Bar -->
+  <color name="red_key_normal">#C43A4F</color> <!-- Warm Red for Key Normal -->
+  <color name="red_key_pressed">#D6336C</color> <!-- Slightly Darker Red for Key Pressed -->
+  <color name="red_box_background">#F78C8C</color> <!-- Light Red for Box Background -->
+  <color name="red_box_border">#F4B831</color> <!-- Bright Yellowish Red for Box Border -->
+  <color name="red_titlecolor">#800000</color> <!-- Dark Red for Title Color -->
+  <color name="red_cardbgcolor">#D05A5A</color> <!-- Darker Red for Card Background -->
 
-  <!--  orange theme  -->
-  <color name="orange_background">#f35b1f</color>
-  <color name="orange_action_bar">#f34712</color>
-  <color name="orange_key_normal">#9c2e1d</color>
-  <color name="orange_key_pressed">#b45344</color>
-  <color name="orange_box_background">#b44e16</color>
-  <color name="orange_box_border">#ffe67f</color>
+  <!--  Orange theme  -->
+  <color name="orange_background">#FFE5D1</color> <!-- Light Peach for Background -->
+  <color name="orange_action_bar">#F34712</color> <!-- Vibrant Orange for Action Bar -->
+  <color name="orange_key_normal">#E0632E</color> <!-- Warm Orange for Key Normal -->
+  <color name="orange_key_pressed">#D94816</color> <!-- Darker Orange for Key Pressed -->
+  <color name="orange_box_background">#F7A76C</color> <!-- Soft Orange for Box Background -->
+  <color name="orange_box_border">#FF9F33</color> <!-- Bright Orange for Box Border -->
+  <color name="orange_titlecolor">#BF5A30</color> <!-- Darker Orange for Title Color -->
+  <color name="orange_cardbgcolor">#D8895F</color> <!-- Darker Peach for Card Background -->
 
+  <!--  Cyan theme  -->
+  <color name="cyan_background">#E0F7FA</color> <!-- Light Cyan for Background -->
+  <color name="cyan_action_bar">#0097A7</color> <!-- Muted Cyan for Action Bar -->
+  <color name="cyan_key_normal">#00796B</color> <!-- Deep Cyan for Key Normal -->
+  <color name="cyan_key_pressed">#00838F</color> <!-- Slightly Darker Cyan for Key Pressed -->
+  <color name="cyan_box_background">#4DD0E1</color> <!-- Soft Cyan for Box Background -->
+  <color name="cyan_box_border">#00796B</color> <!-- Dark Cyan for Box Border -->
+  <color name="cyan_titlecolor">#004D40</color> <!-- Dark Cyan for Title Color -->
+  <color name="cyan_cardbgcolor">#7AB8C0</color> <!-- Darker Cyan for Card Background -->
 
-  <!--  cyan theme  -->
-  <color name="cyan_background">#60e8ff</color>
-  <color name="cyan_action_bar">#5696a1</color>
-  <color name="cyan_key_normal">#1b555f</color>
-  <color name="cyan_key_pressed">#3e97a6</color>
-  <color name="cyan_box_background">#50c7c4</color>
-  <color name="cyan_box_border">#4c4dc7</color>
+  <!--  Purple theme  -->
+  <color name="purple_background">#EDE7F6</color> <!-- Light Lavender for Background -->
+  <color name="purple_action_bar">#6A1B9A</color> <!-- Muted Purple for Action Bar -->
+  <color name="purple_key_normal">#4A0072</color> <!-- Deep Purple for Key Normal -->
+  <color name="purple_key_pressed">#6A1B9A</color> <!-- Slightly Darker Purple for Key Pressed -->
+  <color name="purple_box_background">#3D1F60</color> <!-- Soft Purple for Box Background -->
+  <color name="purple_box_border">#3D1F60</color> <!-- Darker Purple for Box Border -->
+  <color name="purple_titlecolor">#2C003F</color> <!-- Dark Purple for Title Color -->
+  <color name="purple_cardbgcolor">#6D4C9A</color> <!-- Darker Lavender for Card Background -->
 
-  <!--  purple theme  -->
-  <color name="purple_background">#a42ee5</color>
-  <color name="purple_action_bar">#8a3ab5</color>
-  <color name="purple_key_normal">#331643</color>
-  <color name="purple_key_pressed">#5c058c</color>
-  <color name="purple_box_background">#9d79b1</color>
-  <color name="purple_box_border">#180e1d</color>
-
-  <!--  black theme  -->
+  <!--  Black theme  -->
   <color name="black_background">@android:color/black</color>
   <color name="black_box_border">@android:color/white</color>
+  <color name="black_titlecolor">#FFFFFF</color> <!-- Very Dark Gray for Title Color -->
+  <color name="black_cardbgcolor">#2A2A2A</color> <!-- Darker Gray for Card Background -->
 
-  <!-- light theme -->
+  <!-- Light theme -->
   <color name="light_key_normal">#202020</color>
   <color name="light_key_pressed">#444444</color>
   <color name="light_box_background">#808080</color>
   <color name="light_box_border">@android:color/black</color>
+  <color name="light_titlecolor">#000000</color> <!-- Black for Title Color -->
+  <color name="light_cardbgcolor">#D9D9D9</color> <!-- Darker Gray for Card Background -->
 
 </resources>

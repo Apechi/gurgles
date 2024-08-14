@@ -33,7 +33,7 @@
   </style>
 
   <style name="ActionBarBaseStyle"
-         parent="android:style/Widget.Material.ActionBar">
+      parent="android:style/Widget.Material.ActionBar">
   </style>
 
   <!-- Application theme. -->
@@ -49,6 +49,9 @@
     <item name="box_bdcolour">@color/dark_box_border</item>
     <item name="key_normal">@color/dark_key_normal</item>
     <item name="key_pressed">@color/dark_key_pressed</item>
+
+    <item name="titlecolor">@color/dark_titlecolor</item>
+    <item name="cardbgcolor">@color/dark_cardbgcolor</item>
 
   </style>
 
@@ -68,6 +71,9 @@
     <item name="key_normal">@color/cyan_key_normal</item>
     <item name="key_pressed">@color/cyan_key_pressed</item>
 
+    <item name="titlecolor">@color/cyan_titlecolor</item>
+    <item name="cardbgcolor">@color/cyan_cardbgcolor</item>
+
   </style>
 
   <!-- Application theme. -->
@@ -85,6 +91,9 @@
     <item name="box_bdcolour">@color/blue_box_border</item>
     <item name="key_normal">@color/blue_key_normal</item>
     <item name="key_pressed">@color/blue_key_pressed</item>
+
+    <item name="titlecolor">@color/blue_titlecolor</item>
+    <item name="cardbgcolor">@color/blue_cardbgcolor</item>
 
   </style>
 
@@ -104,6 +113,9 @@
     <item name="key_normal">@color/orange_key_normal</item>
     <item name="key_pressed">@color/orange_key_pressed</item>
 
+    <item name="titlecolor">@color/orange_titlecolor</item>
+    <item name="cardbgcolor">@color/orange_cardbgcolor</item>
+
   </style>
 
   <!-- Application theme. -->
@@ -116,11 +128,13 @@
     <item name="android:windowBackground">@color/purple_background</item>
     <item name="android:actionBarStyle">@style/ActionBarPurpleStyle</item>
     <item name="dialog_bgcolour">@color/purple_action_bar</item>
-
     <item name="box_bgcolour">@color/purple_box_background</item>
     <item name="box_bdcolour">@color/purple_box_border</item>
     <item name="key_normal">@color/purple_key_normal</item>
     <item name="key_pressed">@color/purple_key_pressed</item>
+
+    <item name="titlecolor">@color/purple_titlecolor</item>
+    <item name="cardbgcolor">@color/purple_cardbgcolor</item>
 
   </style>
 
@@ -134,11 +148,13 @@
     <item name="android:windowBackground">@color/red_background</item>
     <item name="android:actionBarStyle">@style/ActionBarRedStyle</item>
     <item name="dialog_bgcolour">@color/red_action_bar</item>
-
     <item name="box_bgcolour">@color/red_box_background</item>
     <item name="box_bdcolour">@color/red_box_border</item>
     <item name="key_normal">@color/red_key_normal</item>
     <item name="key_pressed">@color/red_key_pressed</item>
+
+    <item name="titlecolor">@color/red_titlecolor</item>
+    <item name="cardbgcolor">@color/red_cardbgcolor</item>
 
   </style>
 
@@ -157,6 +173,9 @@
     <item name="key_normal">@color/dark_key_normal</item>
     <item name="key_pressed">@color/dark_key_pressed</item>
 
+    <item name="titlecolor">@color/black_titlecolor</item>
+    <item name="cardbgcolor">@color/black_cardbgcolor</item>
+
   </style>
 
   <!-- Application theme. -->
@@ -172,6 +191,8 @@
     <item name="box_bdcolour">@color/light_box_border</item>
     <item name="key_normal">@color/light_key_normal</item>
     <item name="key_pressed">@color/light_key_pressed</item>
+    <item name="titlecolor">@color/light_titlecolor</item>
+    <item name="cardbgcolor">@color/light_titlecolor</item>
 
   </style>
 
@@ -206,9 +227,9 @@
   </style>
 
   <style name="textAppearanceLargeBold"
-         parent="android:style/TextAppearance.Large">
+      parent="android:style/TextAppearance.Large">
 
-        <item name="android:textStyle">bold</item>
+    <item name="android:textStyle">bold</item>
 
   </style>
 
