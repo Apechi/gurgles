@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.5.1'
     }
 }
 
@@ -23,28 +23,22 @@ allprojects {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 35
     namespace "org.billthefarmer.gurgle"
 
     defaultConfig {
         applicationId "org.billthefarmer.gurgle"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 35
         versionName "1.28"
         versionCode 128
 
         buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
     }
 
-    lintOptions {
-        disable 'IconDensities', 'SetJavaScriptEnabled', 'OldTargetApi',
-	    'NonConstantResourceId', 'ExpiredTargetSdkVersion',
-            'ClickableViewAccessibility', 'AndroidGradlePluginVersion'
-        // abortOnError false
-    }
 
     compileOptions {
-        coreLibraryDesugaringEnabled true
+        coreLibraryDesugaringEnabled false
         sourceCompatibility JavaVersion.VERSION_1_9
         targetCompatibility JavaVersion.VERSION_1_9
     }
@@ -53,5 +47,8 @@ android {
 	implementation 'com.google.zxing:core:3.5.3'
         implementation 'nl.dionsegijn:konfetti-xml:2.0.4'
 	coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    }
+    lint {
+        disable 'IconDensities', 'SetJavaScriptEnabled', 'OldTargetApi', 'NonConstantResourceId', 'ExpiredTargetSdkVersion', 'ClickableViewAccessibility', 'AndroidGradlePluginVersion'
     }
 }

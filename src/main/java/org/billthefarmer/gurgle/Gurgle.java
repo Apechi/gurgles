@@ -188,6 +188,7 @@ public class Gurgle extends Activity
     public static final int DUTCH      = 7;
     public static final int AFRIKAANS  = 8;
     public static final int HUNGARIAN  = 9;
+    public static final int INDONESIA = 10;
 
     public static final int WIKTIONARY = 0;
     public static final int AARD2      = 1;
@@ -769,6 +770,10 @@ public class Gurgle extends Activity
 
         case R.id.hungarian:
             setLanguage(HUNGARIAN);
+            break;
+
+        case R.id.indonesian:
+            setLanguage(INDONESIA);
             break;
 
         case R.id.getText:
@@ -1634,6 +1639,9 @@ public class Gurgle extends Activity
         case HUNGARIAN:
         	return "hu";
 
+            case INDONESIA:
+                return "id";
+
         }
     }
 
@@ -1650,48 +1658,51 @@ public class Gurgle extends Activity
     {
         Words.setLanguage(this, language);
 
-        switch (language)
-        {
-        default:
-        case ENGLISH:
-            getActionBar().setSubtitle(R.string.english);
-            break;
+        switch (language) {
+            default:
+            case ENGLISH:
+                getActionBar().setSubtitle(R.string.english);
+                break;
 
-        case ITALIAN:
-            getActionBar().setSubtitle(R.string.italian);
-            break;
+            case ITALIAN:
+                getActionBar().setSubtitle(R.string.italian);
+                break;
 
-        case SPANISH:
-            getActionBar().setSubtitle(R.string.spanish);
-            break;
+            case SPANISH:
+                getActionBar().setSubtitle(R.string.spanish);
+                break;
 
-        case CATALAN:
-            getActionBar().setSubtitle(R.string.catalan);
-            break;
+            case CATALAN:
+                getActionBar().setSubtitle(R.string.catalan);
+                break;
 
-        case FRENCH:
-            getActionBar().setSubtitle(R.string.french);
-            break;
+            case FRENCH:
+                getActionBar().setSubtitle(R.string.french);
+                break;
 
-        case PORTUGUESE:
-            getActionBar().setSubtitle(R.string.portuguese);
-            break;
+            case PORTUGUESE:
+                getActionBar().setSubtitle(R.string.portuguese);
+                break;
 
-        case GERMAN:
-            getActionBar().setSubtitle(R.string.german);
-            break;
+            case GERMAN:
+                getActionBar().setSubtitle(R.string.german);
+                break;
 
-        case DUTCH:
-            getActionBar().setSubtitle(R.string.dutch);
-            break;
+            case DUTCH:
+                getActionBar().setSubtitle(R.string.dutch);
+                break;
 
-        case AFRIKAANS:
-            getActionBar().setSubtitle(R.string.afrikaans);
-            break;
+            case AFRIKAANS:
+                getActionBar().setSubtitle(R.string.afrikaans);
+                break;
 
-        case HUNGARIAN:
-            getActionBar().setSubtitle(R.string.hungarian);
-            break;
+            case HUNGARIAN:
+                getActionBar().setSubtitle(R.string.hungarian);
+                break;
+
+            case INDONESIA:
+                getActionBar().setSubtitle(R.string.indonesian);
+                break;
         }
     }
 

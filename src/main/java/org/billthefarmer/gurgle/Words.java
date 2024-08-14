@@ -63,6 +63,7 @@ public class Words
     public static final String DUTCH_FILE       = "Dutch.txt";
     public static final String AFRIKAANS_FILE   = "Afrikaans.txt";
     public static final String HUNGARIAN_FILE   = "Hungarian.txt";
+    public static final String INDONESIAN_FILE  = "Indonesian.txt";
 
     private static final int MAX_USED = 256;
 
@@ -107,63 +108,67 @@ public class Words
     {
         guess = new ArrayList<String>();
 
-        switch (l)
-        {
-        case Gurgle.ENGLISH:
-            readWords(context, WORDS_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, ENGLISH_FILE, words);
-            break;
+        switch (l) {
+            case Gurgle.ENGLISH:
+                readWords(context, WORDS_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, ENGLISH_FILE, words);
+                break;
 
-        case Gurgle.ITALIAN:
-            readWords(context, ITALIAN_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, ITALIAN_LONG, words);
-            break;
+            case Gurgle.ITALIAN:
+                readWords(context, ITALIAN_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, ITALIAN_LONG, words);
+                break;
 
-        case Gurgle.SPANISH:
-            readWords(context, SPANISH_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, SPANISH_LONG, words);
-            break;
+            case Gurgle.SPANISH:
+                readWords(context, SPANISH_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, SPANISH_LONG, words);
+                break;
 
-        case Gurgle.CATALAN:
-            readWords(context, CATALAN_FILE, guess);
-            words = new HashSet<String>(guess);
-            break;
+            case Gurgle.CATALAN:
+                readWords(context, CATALAN_FILE, guess);
+                words = new HashSet<String>(guess);
+                break;
 
-        case Gurgle.FRENCH:
-            readWords(context, FRENCH_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, FRENCH_LONG, words);
-            break;
+            case Gurgle.FRENCH:
+                readWords(context, FRENCH_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, FRENCH_LONG, words);
+                break;
 
-        case Gurgle.PORTUGUESE:
-            readWords(context, PORTUGUESE_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, PORTUGUESE_LONG, words);
-            break;
+            case Gurgle.PORTUGUESE:
+                readWords(context, PORTUGUESE_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, PORTUGUESE_LONG, words);
+                break;
 
-        case Gurgle.GERMAN:
-            readWords(context, GERMAN_FILE, guess);
-            words = new HashSet<String>(guess);
-            readWords(context, GERMAN_LONG, words);
-            break;
+            case Gurgle.GERMAN:
+                readWords(context, GERMAN_FILE, guess);
+                words = new HashSet<String>(guess);
+                readWords(context, GERMAN_LONG, words);
+                break;
 
-        case Gurgle.DUTCH:
-            readWords(context, DUTCH_FILE, guess);
-            words = new HashSet<String>(guess);
-            break;
+            case Gurgle.DUTCH:
+                readWords(context, DUTCH_FILE, guess);
+                words = new HashSet<String>(guess);
+                break;
 
-        case Gurgle.AFRIKAANS:
-            readWords(context, AFRIKAANS_FILE, guess);
-            words = new HashSet<String>(guess);
-            break;
+            case Gurgle.AFRIKAANS:
+                readWords(context, AFRIKAANS_FILE, guess);
+                words = new HashSet<String>(guess);
+                break;
 
-        case Gurgle.HUNGARIAN:
-            readWords(context, HUNGARIAN_FILE, guess);
-            words = new HashSet<String>(guess);
-            break;
+            case Gurgle.HUNGARIAN:
+                readWords(context, HUNGARIAN_FILE, guess);
+                words = new HashSet<String>(guess);
+                break;
+
+            case Gurgle.INDONESIA:
+                readWords(context, INDONESIAN_FILE, guess);
+                words = new HashSet<String>(guess);
+                break;
         }
     }
 
