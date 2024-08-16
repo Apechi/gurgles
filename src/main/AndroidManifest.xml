@@ -1,69 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto"
     tools:ignore="GoogleAppIndexingWarning">
 
-  <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-  <queries>
-    <intent>
-      <action android:name="aard2.lookup" />
-    </intent>
-    <intent>
-      <action android:name="com.hughes.action.ACTION_SEARCH_DICT" />
-    </intent>
-  </queries>
+    <queries>
+        <intent>
+            <action android:name="aard2.lookup" />
+        </intent>
+        <intent>
+            <action android:name="com.hughes.action.ACTION_SEARCH_DICT" />
+        </intent>
+    </queries>
 
-  <meta-data
-      android:name="android.webkit.WebView.MetricsOptOut"
-      android:value="true" />
+    <meta-data
+        android:name="android.webkit.WebView.MetricsOptOut"
+        android:value="true" />
 
-  <application
-      android:allowBackup="true"
-      android:icon="@drawable/ic_launcher"
-      android:label="@string/appName"
-      android:theme="@style/AppTheme"
-      tools:ignore="AllowBackup">
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appName"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
 
-    <activity
-        android:name="Gurgle"
-        android:exported="true"
-        android:launchMode="singleTask"
-        android:screenOrientation="portrait"
-        tools:ignore="LockedOrientationActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-      <intent-filter>
-        <action android:name="android.intent.action.SEND" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-        <category android:name="android.intent.category.BROWSABLE" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <data android:mimeType="image/*" />
-        <data android:mimeType="text/plain" />
-      </intent-filter>
-    </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/sdk_key_applovin" />
 
-    <activity
-	android:name="Search" />
+        <activity
+            android:name=".Gurgle"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
 
-    <activity
-        android:name="Help"
-        android:label="@string/help" />
+        <activity android:name=".Search" />
 
-    <provider
-        android:name="android.support.v4.content.FileProvider"
-        android:authorities="org.billthefarmer.gurgle.fileprovider"
-        android:exported="false"
-        android:grantUriPermissions="true">
-      <meta-data
-          android:name="android.support.FILE_PROVIDER_PATHS"
-          android:resource="@xml/filepaths" />
-    </provider>
+        <activity
+            android:name=".Help"
+            android:label="@string/help" />
 
-  </application>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="org.theprime.primedle.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
+    </application>
 
 </manifest>

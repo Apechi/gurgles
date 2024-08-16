@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <string name="appName">Gurgle</string>
+  <string name="appName">Primedle</string>
   <string name="help">Aiuto</string>
   <string name="refresh">Aggiorna</string>
   <string name="share">Condividi</string>
@@ -63,10 +63,10 @@
   </string>
 
   <string name="version" formatted="false"><a
-  href="https://github.com/billthefarmer/gurgle/releases/latest">%s</a>\n\nVersione del
-  %s\n\nCopyright \u00A9 2022 <a
-  href="https://github.com/billthefarmer">Bill
-  Farmer</a>\n\nDizionari da <a
+  href="https://github.com/Apechi/primeble">%s</a>\n\nVersione del
+  %s\n\nCopyright \u00A9 2024 <a
+  href="https://github.com/Apechi/primeble">Bill
+  Farmer &amp; The Prime</a>\n\nDizionari da <a
   href="https://github.com/lexica">Lexica</a>\nTemi da <a
   href="https://github.com/PoorLazyCoder">PoorLazyCoder</a>\nTraduzione
   e dizionario francese da <a

@@ -21,7 +21,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.gurgle;
+package org.theprime.primedle;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -35,7 +35,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 // HelpActivity class

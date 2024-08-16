@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <string name="appName">Gurgle</string>
+  <string name="appName">Primedle</string>
   <string name="help">Help</string>
   <string name="refresh">Refresh</string>
   <string name="share">Share</string>
@@ -62,18 +62,14 @@
     Congratulations! You have guessed %s correctly
   </string>
 
-  <string name="version" formatted="false"><a
-  href="https://github.com/billthefarmer/gurgle/releases/latest">%s</a>\n\nBuilt
-  %s\n\nCopyright \u00A9 2022 <a
-  href="https://github.com/billthefarmer">Bill
-  Farmer</a>\n\nDictionaries from <a
-  href="https://github.com/lexica">Lexica</a>\nThemes from <a
-  href="https://github.com/PoorLazyCoder">PoorLazyCoder</a>\nFrench
-  language and dictionary loader from <a
-  href="https://github.com/tatref">tatref</a> and <a
-  href="http://www.lexique.org">Lexique</a>\nConfetti from <a
-  href="https://github.com/DanielMartinus/Konfetti">Konfetti</a>\n\nLicence <a
-  href="https://www.gnu.org/licenses/gpl.txt">GNU GPLv3</a>
+  <string name="version" formatted="false"><a href="https://github.com/Apechi/primeble">%s</a>\n\nBuilt
+  %s\n\nCopyright \u00A9 2024 <a href="https://github.com/Apechi/primeble">Made by: Bill
+  Farmer. Modified by: The Prime</a>\n\nDictionaries from <a href="https://github.com/lexica">Lexica</a>\nThemes from <a href="https://github.com/PoorLazyCoder">PoorLazyCoder</a>\nFrench
+  language and dictionary loader from <a href="https://github.com/tatref">tatref</a> and <a href="http://www.lexique.org">Lexique</a>\nConfetti from <a href="https://github.com/DanielMartinus/Konfetti">Konfetti</a>\n\nLicence <a href="https://www.gnu.org/licenses/gpl.txt">GNU GPLv3</a>
   </string>
+
+  <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+  <string name="sdk_key_applovin" translatable="false">T7PPns0K6JV00uGv0ZAEKsTWrpwA-N4Hchi_KKecaqTa_U5zQcyyoI_pTcC5TM1OgfrLz5dWGdASKWgK6l5Sks</string>
+
 
 </resources>

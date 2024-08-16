@@ -21,7 +21,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.gurgle;
+package org.theprime.primedle;
 
 import android.content.Context;
 import android.util.Base64;

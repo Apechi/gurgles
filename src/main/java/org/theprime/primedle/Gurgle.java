@@ -21,13 +21,12 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.gurgle;
+package org.theprime.primedle;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.SearchManager;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -56,7 +55,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +67,8 @@ import android.widget.Toolbar;
 
 import android.support.v4.content.FileProvider;
 
+import com.adsmedia.adsmodul.AdsHelper;
+import com.adsmedia.adsmodul.utils.AdsConfig;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Binarizer;
 import com.google.zxing.BinaryBitmap;
@@ -79,19 +79,17 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+import org.theprime.primedle.config.AdsData;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 import java.text.DateFormat;
 import java.text.Normalizer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -523,6 +521,8 @@ public class Gurgle extends Activity
         solved = false;
         letter = 0;
         row = 0;
+
+        showBanner();
     }
 
     // onRestoreInstanceState
@@ -1073,6 +1073,7 @@ public class Gurgle extends Activity
 
             showToast(R.string.congratulations, word);
             solved = true;
+            AdsHelper.showInterstitialPrime(this, AdsConfig.Interstitial_ID, AdsConfig.Interval);
         }
 
         StringBuilder test = new StringBuilder(word);
@@ -1972,4 +1973,34 @@ public class Gurgle extends Activity
             view.setBackgroundResource(R.drawable.toast_frame);
         toast.show();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        return;
+    }
+
+    private void showBanner() {
+        // Retrieve the ad IDs
+        AdsData.getIDAds();
+
+        // Handle GDPR compliance and initialize ads
+        AdsHelper.gdprPrime(this, false, "", AdsConfig.Game_App_ID);
+        AdsHelper.initializeAdsPrime(this, BuildConfig.APPLICATION_ID, AdsConfig.Game_App_ID);
+
+        // Load interstitial ads
+        AdsHelper.loadInterstitialPrime(this, AdsConfig.Interstitial_ID);
+
+        // Enable debug mode if not in debug build
+        if (!BuildConfig.DEBUG) {
+            AdsHelper.debugModePrime(true);
+        }
+
+        // Show banner ads
+        AdsHelper.showBannerPrime(this, findViewById(R.id.layads), AdsConfig.Banner_ID);
+    }
+
+
+
 }
+

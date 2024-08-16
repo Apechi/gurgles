@@ -21,7 +21,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.gurgle;
+package org.theprime.primedle;
 
 import android.app.ActionBar;
 import android.app.Activity;

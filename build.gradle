@@ -2,6 +2,11 @@ buildscript {
     repositories {
         mavenCentral()
         google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle/'
+        }
     }
 
     dependencies {
@@ -13,6 +18,11 @@ allprojects {
     repositories {
         mavenCentral()
         google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle/'
+        }
     }
 
     // tasks.withType(JavaCompile) {
@@ -24,13 +34,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 35
-    namespace "org.billthefarmer.gurgle"
+    namespace "org.theprime.primedle"
 
     defaultConfig {
-        applicationId "org.billthefarmer.gurgle"
+        applicationId "org.theprime.primedle"
         minSdkVersion 22
         targetSdkVersion 35
-        versionName "1.28"
+        versionName "1.0"
         versionCode 128
 
         buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
@@ -44,7 +54,10 @@ android {
     }
 
     dependencies {
-	implementation 'com.google.zxing:core:3.5.3'
+        implementation 'androidx.appcompat:appcompat:1.7.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+        implementation "com.github.saputra1337:ModulAdsAdmob:1.0.0"
+	    implementation 'com.google.zxing:core:3.5.3'
         implementation 'nl.dionsegijn:konfetti-xml:2.0.4'
         implementation 'androidx.cardview:cardview:1.0.0'
         implementation 'com.google.android.material:material:1.12.0'
@@ -53,4 +66,11 @@ android {
     lint {
         disable 'IconDensities', 'SetJavaScriptEnabled', 'OldTargetApi', 'NonConstantResourceId', 'ExpiredTargetSdkVersion', 'ClickableViewAccessibility', 'AndroidGradlePluginVersion'
     }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.activity:activity:1.9.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
