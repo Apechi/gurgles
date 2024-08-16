@@ -1897,7 +1897,7 @@ public class Gurgle extends Activity
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.appName);
-        builder.setIcon(R.drawable.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher);
 
         DateFormat dateFormat = DateFormat.getDateTimeInstance();
         SpannableStringBuilder spannable =
